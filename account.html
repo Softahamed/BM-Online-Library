@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Center | BM Online Library</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">BM Online Library</a></h1> 
+        </div>
+    </header>
+
+    <main class="container account-center-content">
+        <h2>Account Center</h2>
+        
+        <form id="profileForm">
+            <div class="profile-details">
+                <div class="profile-pic-container">
+                    <img id="profile-pic-preview" src="placeholder.png" alt="Profile Picture">
+                    <input type="file" id="profilePicInput" accept="image/*">
+                    <label for="profilePicInput" class="upload-btn">Upload Photo</label>
+                </div>
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" value="[User Name from localStorage]" required>
+            </div>
+
+            <hr>
+
+            <h3>Payment Details</h3>
+            <p>Your payment information is securely stored.</p>
+
+            <div class="payment-fields">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod">
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+
+                <div id="cardDetails" class="payment-detail-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234-5678-9012-3456">
+                    <label for="expiryDate">Expiry (MM/YY)</label>
+                    <input type="text" id="expiryDate" placeholder="01/25">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123">
+                </div>
+                
+                <div id="paypalDetails" class="payment-detail-group" style="display:none;">
+                    <label for="paypalEmail">PayPal Email</label>
+                    <input type="email" id="paypalEmail" placeholder="your.paypal@example.com">
+                </div>
+            </div>
+
+            <button type="submit" class="cta-btn save-btn">Save Changes</button>
+        </form>
+    </main>
+
+    <footer>
+    <div class="container">
+        <div class="footer-bottom">
+            &copy; <span id="currentYear"></span> BM Online Library. All rights reserved.
+        </div>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

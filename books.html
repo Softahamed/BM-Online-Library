@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | BM Online Library</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+ 
+     <header class="header">
+        <div class="logo"><a href="index.html">BM Online Library</a></div>
+        <nav class="nav-menu">
+            <a href="index.html" class="active">Home</a>
+        </nav>
+    </header>
+
+    <main class="container book-page-content">
+        <h2>Explore Our Digital Collection</h2>
+        <p class="section-description">Dive into thousands of titles across various categories.</p>
+        
+        <div class="search-bar">
+            <form id="bookSearchForm" autocomplete="off">
+                <div class="search-bar-animated">
+                    <input type="text" id="searchInput" placeholder="Search by book name, author, or category..." class="search-input" />
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="book-grid" id="bookGrid">
+            </div>
+
+        <p id="loading-message">Loading books...</p>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            &copy; <span id="currentYear"></span> BM Online Library. All rights reserved.
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

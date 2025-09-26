@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM Online Library - Modern Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">BM Online Library</div>
+        <nav class="nav-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="#categories" class="nav-item">Book Category</a>
+            <a href="#contact" class="nav-item">Contact Us</a>
+            <ul id="auth-buttons" style="display:inline;list-style:none;padding:0;margin:0;"></ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Dive Into a World of Knowledge</h1>
+                <p>Access thousands of books, both free and paid, available for online reading or download.</p>
+                <a href="books.html">
+                <button class="cta-btn">Explore Books</button>
+                </a>
+            </div>
+        </section>
+
+        <section id="latest-books" class="latest-books-section">
+            <h2>Latest Uploaded Books</h2>
+            <div id="latestBooksGrid" class="books-grid"></div>
+        </section>
+
+        <section class="stats-section">
+            <h2>Our Community</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number" id="totalUsers">0</span>
+                    <p>Total Registered Users</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-book-open"></i>
+                    <span class="stat-number" id="booksRead">0</span>
+                    <p>Books Read This Week</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span class="stat-number" id="loginsToday">0</span>
+                    <p>Logins Today</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="category-section">
+            <h2>Book Categories</h2>
+            <p>Browse the largest collection of literature, science, and more!</p>
+            <div class="categories-grid">
+                <div class="category-card">Fiction</div>
+                <div class="category-card">Science</div>
+                <div class="category-card">Technology</div>
+                <div class="category-card">History</div>
+                <div class="category-card">Biography</div>
+                <div class="category-card">Business</div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>We're here to help. Send us your queries.</p>
+            </section>
+    </main>
+
+    <footer>
+    <div class="container">
+        <div class="footer-bottom">
+            &copy; <span id="currentYear"></span> BM Online Library. All rights reserved.
+        </div>
+    </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Welcome Back!</h3>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="auth-submit-btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" class="switch-to-signup">Sign up</a></p>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Join the Library!</h3>
+            <form id="signupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="auth-submit-btn">Signup</button>
+            </form>
+            <p>Already have an account? <a href="#" class="switch-to-login">Log in</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Book Upload | BM Online Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html">BM Online Library</a></div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Admin: Upload New Book</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Book Title" required><br>
+            <input type="text" name="author" placeholder="Author" required><br>
+            <select name="category" required>
+                <option value="">Select Category</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Science">Science</option>
+                <option value="Technology">Technology</option>
+                <option value="History">History</option>
+                <option value="Biography">Biography</option>
+                <option value="Children">Children</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+            </select><br>
+            <textarea name="description" placeholder="Description" required></textarea><br>
+            <input type="number" name="price" placeholder="Price (0 for Free)" min="0" step="0.01"><br>
+            <input type="file" name="bookFile" accept=".pdf,.epub" required><br>
+            <input type="file" name="coverImage" accept="image/*"><br>
+            <button type="submit" class="cta-btn">Upload Book</button>
+        </form>
+        <p id="uploadMsg"></p>
+    </main>
+    <footer class="footer">
+        <div class="footer-bottom">&copy; <span id="currentYear"></span> BM Online Library. All rights reserved.</div>
+    </footer>
+    <script src="admin_upload.js"></script>
+</body>
+</html>
